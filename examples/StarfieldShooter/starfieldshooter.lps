@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="starfieldshooter.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="60"/>
+        <CursorPos Y="76"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\..\SimpleXinput.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="21" Y="43"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\XInput.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="27" Y="46"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="10"/>
+        <CursorPos X="80" Y="27"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="8"/>
+        <CursorPos Y="1876"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uScenes.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="18"/>
+        <CursorPos X="12" Y="33"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uAnimations.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="17"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="uGlobal.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="10" Y="60"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="1584" TopLine="1568"/>
+      </Position1>
+      <Position2>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="1585" TopLine="1568"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="1598" TopLine="1581"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="1600" TopLine="1581"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="1870" TopLine="1855"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="115" Column="10" TopLine="90"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="744" Column="17" TopLine="671"/>
+      </Position7>
+      <Position8>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="162" Column="3" TopLine="147"/>
+      </Position8>
+      <Position9>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="682" Column="10" TopLine="678"/>
+      </Position9>
+      <Position10>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="27" Column="80" TopLine="10"/>
+      </Position10>
+      <Position11>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="143" Column="5" TopLine="91"/>
+      </Position11>
+      <Position12>
+        <Filename Value="uScenes.pas"/>
+        <Caret Line="47" Column="28" TopLine="27"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uScenes.pas"/>
+        <Caret Line="33" Column="12" TopLine="18"/>
+      </Position13>
+      <Position14>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="29" Column="17" TopLine="13"/>
+      </Position14>
+      <Position15>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="31" Column="42" TopLine="15"/>
+      </Position15>
+      <Position16>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="11" Column="40"/>
+      </Position16>
+      <Position17>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="84" Column="15" TopLine="20"/>
+      </Position17>
+      <Position18>
+        <Filename Value="uGlobal.pas"/>
+        <Caret Line="60" Column="10" TopLine="40"/>
+      </Position18>
+      <Position19>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="81" Column="13" TopLine="68"/>
+      </Position19>
+      <Position20>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="91" Column="79" TopLine="75"/>
+      </Position20>
+      <Position21>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="72" Column="45" TopLine="60"/>
+      </Position21>
+      <Position22>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="76" TopLine="60"/>
+      </Position22>
+      <Position23>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="77" TopLine="60"/>
+      </Position23>
+      <Position24>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="70" Column="32" TopLine="60"/>
+      </Position24>
+      <Position25>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="76" TopLine="60"/>
+      </Position25>
+      <Position26>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="54" TopLine="38"/>
+      </Position26>
+      <Position27>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="55" TopLine="38"/>
+      </Position27>
+      <Position28>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="66" Column="56" TopLine="38"/>
+      </Position28>
+      <Position29>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="57" TopLine="38"/>
+      </Position29>
+      <Position30>
+        <Filename Value="starfieldshooter.lpr"/>
+        <Caret Line="55" Column="33" TopLine="38"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="lasthigh"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
