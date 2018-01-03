@@ -1,8 +1,9 @@
 program lainz_circle;
 
-{
- *  Copyright (c) 2017 Enrique Fuentes aka. Turrican
- *
+{	
+ *  Copyright (c) 2018 Enrique Fuentes aka. Turrican
+ *  Based on Lainz BGRA Canvas example and ported to SimpleZGL. Thanks for awesome BGRA Example! 
+ *  
  *  This software is provided 'as-is', without any express or
  *  implied warranty. In no event will the authors be held
  *  liable for any damages arising from the use of this software.
@@ -23,6 +24,8 @@ program lainz_circle;
  *  3. This notice may not be removed or altered from any
  *     source distribution.
 }
+
+
 
 uses
   SimpleZGL,
