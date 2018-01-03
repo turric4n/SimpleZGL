@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="lainz_circle.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="256"/>
+        <CursorPos X="101" Y="287"/>
+        <UsageCount Value="64"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="..\..\SimpleXinput.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="21" Y="43"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="..\..\XInput.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="27" Y="46"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2479"/>
+        <CursorPos Y="2499"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\..\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos Y="1876"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="D:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="732"/>
+        <CursorPos X="12" Y="739"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\fpcupdeluxe32\fpcsrc\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="186"/>
+        <CursorPos X="23" Y="206"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit6>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="D:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="626" Column="21" TopLine="591"/>
+      </Position1>
+      <Position2>
+        <Filename Value="D:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\zglHeader.pas"/>
+        <Caret Line="629" Column="55" TopLine="594"/>
+      </Position2>
+      <Position3>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="174" Column="82" TopLine="164"/>
+      </Position3>
+      <Position4>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="150" TopLine="140"/>
+      </Position4>
+      <Position5>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="152" TopLine="140"/>
+      </Position5>
+      <Position6>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="153" TopLine="140"/>
+      </Position6>
+      <Position7>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="154" TopLine="140"/>
+      </Position7>
+      <Position8>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="150" TopLine="140"/>
+      </Position8>
+      <Position9>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="152" TopLine="140"/>
+      </Position9>
+      <Position10>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="153" TopLine="140"/>
+      </Position10>
+      <Position11>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="154" TopLine="140"/>
+      </Position11>
+      <Position12>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="162" TopLine="140"/>
+      </Position12>
+      <Position13>
+        <Filename Value="..\..\SimpleZGL.pas"/>
+        <Caret Line="2499" TopLine="2479"/>
+      </Position13>
+      <Position14>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="150" TopLine="140"/>
+      </Position14>
+      <Position15>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="158" TopLine="140"/>
+      </Position15>
+      <Position16>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="159" TopLine="140"/>
+      </Position16>
+      <Position17>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="154" TopLine="134"/>
+      </Position17>
+      <Position18>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="162" Column="52" TopLine="152"/>
+      </Position18>
+      <Position19>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="211" Column="60" TopLine="183"/>
+      </Position19>
+      <Position20>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="186" Column="65" TopLine="161"/>
+      </Position20>
+      <Position21>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="214" Column="61" TopLine="192"/>
+      </Position21>
+      <Position22>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="176" Column="16" TopLine="164"/>
+      </Position22>
+      <Position23>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="168" Column="70" TopLine="144"/>
+      </Position23>
+      <Position24>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="184" Column="16" TopLine="167"/>
+      </Position24>
+      <Position25>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="183" Column="13" TopLine="162"/>
+      </Position25>
+      <Position26>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="42" Column="7" TopLine="28"/>
+      </Position26>
+      <Position27>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="201" Column="31" TopLine="189"/>
+      </Position27>
+      <Position28>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="207" Column="65" TopLine="174"/>
+      </Position28>
+      <Position29>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="90" Column="23" TopLine="57"/>
+      </Position29>
+      <Position30>
+        <Filename Value="lainz_circle.lpr"/>
+        <Caret Line="207" Column="54" TopLine="187"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="Self.Spritelist"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>

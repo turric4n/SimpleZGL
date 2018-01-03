@@ -70,3 +70,5 @@ examples/MainLoop/backup/
 *.ppu
 
 *.compiled
+
+bin/i386-win32/

@@ -128,12 +128,14 @@ type
   TSZEventMouseCollision = procedure(ASender: TObject; X, Y : Single) of object;
   TSZEventCollision = procedure(ASender: TObject) of object;
   TSZEventOnMouseClick = procedure(ASender: TObject; Button : ShortInt; X, Y : Single) of object;
+  TSZEventOnMouseClickRelease = procedure(ASender: TObject; Button : ShortInt; X, Y : Single) of object;
   TSZEventOnFadeOut = procedure(ASender: TObject) of object;
   TSZEventOnMouseOut = procedure(ASender: TObject) of object;
   TSZEventOnFadeIn = procedure(ASender: TObject) of object;
   TSZEventOnTextureLoaded = procedure(ASender: TObject) of object;
   TSZEventOnMoveAnimation = procedure(ASender: TObject) of object;
   TSZEventOnGesture = procedure(ASender: TObject; Button : ShortInt; Move : zglTPoint2D) of object;
+  TSZEventOnGestureOut = procedure(ASender: TObject; Button : ShortInt; Move : zglTPoint2D) of object;
   TSZEventOnJoyDisconnected = procedure(ASender: TObject) of object;
   TSZEventOnJoyConnected = procedure(ASender: TObject) of object;
   TSZEventOnJoyInput = procedure(ASender: TObject) of object;
@@ -449,6 +451,7 @@ type
     function _gettexturedata: PByteArray;
 {$ENDIF}
   protected
+    _mouseclickedleft, _mouseclickedright, _mousedownleft, _mousedownright : Boolean;
     _camera_rect : zglTRect;
     _spritebatch : TSZSpriteBath;
     _textureframeh: Integer;
@@ -512,10 +515,12 @@ type
   public
     OnErrorLoadingTexture: TSZEventOnErrorLoadTexture;
     OnGesture: TSZEventOnGesture;
+    OnGestureRelease : TSZEventOnGestureOut;
     OnCollision: TSZEventCollision;
     OnMove: TSZEventOnMove;
     OnMouseCollision: TSZEventMouseCollision;
     OnMouseClick: TSZEventOnMouseClick;
+    OnMouseClickRelease : TSZEventOnMouseClick;
     OnMoveAnimation: TSZEventOnMoveAnimation;
     OnLoadError: TSZEventOnLoadError;
     OnFadeIn: TSZEventOnFadeIn;
@@ -603,6 +608,7 @@ type
 {$IFDEF FPC}
     spritelist: TObjectList;
 {$ENDIF}
+    _mouseclickedleft, _mouseclickedright, _mousedownleft, _mousedownright : Boolean;
     _ElapsedTime: Integer;
     _joycontrol: Boolean;
     _fadeout: Boolean;
@@ -627,9 +633,11 @@ type
   public
     OnBeforeDraw: TSZEventBeforeDraw;
     OnGesture: TSZEventOnGesture;
+    OnGestureRelease : TSZEventOnGesture;
     OnMouseWheel: TSZEventOnMouseWheel;
     OnMouseCollision: TSZEventMouseCollision;
     OnMouseClick: TSZEventOnMouseClick;
+    OnMouseClickRelease : TSZEventOnMouseClick;
     OnFadeOut: TSZEventOnFadeOut;
     OnFadeIn: TSZEventOnFadeIn;
     OnAfterDraw: TSZEventAfterDraw;
@@ -1942,27 +1950,67 @@ begin
     end;
     if mouse_Click(M_BLEFT) then
     begin
+      _mouseclickedleft := true;
       MouseLastCoords.LastMouseXLeftButton := mouse_X;
       MouseLastCoords.LastMouseYLeftButton := mouse_Y;
       if Assigned(OnMouseClick) then
         OnMouseClick(Self, M_BLEFT, _camera_mouse_X - (_camera_rect.X), _camera_mouse_Y - (_camera_rect.Y));
+    end
+    else
+    begin
+      if _mouseclickedleft then
+      begin
+        _mouseclickedleft := false;
+        if Assigned(OnMouseClickRelease) then
+          OnMouseClickRelease(Self, M_BLEFT, _camera_mouse_X - (_camera_rect.X), _camera_mouse_Y - (_camera_rect.Y));
+      end;
     end;
     if mouse_Down(M_BLEFT) then
     begin
+      _mousedownleft := True;
       if Assigned(OnGesture) then
         OnGesture(Self, M_BLEFT, Getgesture(MouseLastCoords.LastMouseXLeftButton, MouseLastCoords.LastMouseYLeftButton));
+    end
+    else
+    begin
+      if _mousedownleft then
+      begin
+        _mousedownleft := False;
+        if Assigned(OnGestureRelease) then
+          OnGestureRelease(Self, M_BLEFT, Getgesture(MouseLastCoords.LastMouseXLeftButton, MouseLastCoords.LastMouseYLeftButton));
+      end;
     end;
     if mouse_Click(M_BRIGHT) then
     begin
+      _mouseclickedright := True;
       MouseLastCoords.LastMouseXRightButton := mouse_X;
       MouseLastCoords.LastMouseYRightButton := mouse_Y;
       if Assigned(OnMouseClick) then
         OnMouseClick(Self, M_BRIGHT, _camera_mouse_X - (_camera_rect.X), _camera_mouse_Y - (_camera_rect.Y));
+    end
+    else
+    begin
+      if _mouseclickedright then
+      begin
+        _mouseclickedright := false;
+        if Assigned(OnMouseClickRelease) then
+          OnMouseClickRelease(Self, M_BRIGHT, _camera_mouse_X - (_camera_rect.X), _camera_mouse_Y - (_camera_rect.Y));
+      end;
     end;
     if mouse_Down(M_BRIGHT) then
     begin
+      _mousedownright := True;
       if Assigned(OnGesture) then
         OnGesture(Self, M_BRIGHT, Getgesture(MouseLastCoords.LastMouseXRightButton, MouseLastCoords.LastMouseYRightButton));
+    end
+    else
+    begin
+      if _mousedownright then
+      begin
+        _mousedownleft := False;
+        if Assigned(OnGestureRelease) then
+          OnGestureRelease(Self, M_BRIGHT, Getgesture(MouseLastCoords.LastMouseXRightButton, MouseLastCoords.LastMouseYRightButton));
+      end;
     end;
   end;
 end;
@@ -2308,6 +2356,7 @@ begin
         end;
       end;
     end;
+    if Assigned(OnAfterDraw) then OnAfterDraw(Self);
     scissor_End;
     cam2d_Set(nil);
     if ShowBorders then
@@ -2423,27 +2472,55 @@ begin
       end;
       if mouse_Click(M_BLEFT) then
       begin
+        _mouseclickedleft := True;
         MouseLastCoords.LastMouseXLeftButton := mouse_X;
         MouseLastCoords.LastMouseYLeftButton := mouse_Y;
         if Assigned(OnMouseClick) then
           OnMouseClick(Self, M_BLEFT, mouse_X, mouse_Y);
+      end
+      else
+      begin
+        _mouseclickedleft := False;
+        if Assigned(OnMouseClickRelease) then
+          OnMouseClickRelease(Self, M_BLEFT, mouse_X, mouse_Y);
       end;
       if mouse_Down(M_BLEFT) then
       begin
+        _mousedownleft := True;
         if Assigned(OnGesture) then
           OnGesture(Self, M_BLEFT, Getgesture(MouseLastCoords.LastMouseXLeftButton, MouseLastCoords.LastMouseYLeftButton));
+      end
+      else
+      begin
+        _mousedownleft := False;
+        if Assigned(OnGestureRelease) then
+          OnGestureRelease(Self, M_BLEFT, Getgesture(MouseLastCoords.LastMouseXLeftButton, MouseLastCoords.LastMouseYLeftButton));
       end;
       if mouse_Click(M_BRIGHT) then
       begin
+        _mouseclickedright := True;
         MouseLastCoords.LastMouseXRightButton := mouse_X;
         MouseLastCoords.LastMouseYRightButton := mouse_Y;
         if Assigned(OnMouseClick) then
           OnMouseClick(Self, M_BRIGHT, mouse_X, mouse_Y);
+      end
+      else
+      begin
+        _mouseclickedright := False;
+        if Assigned(OnMouseClickRelease) then
+          OnMouseClick(Self, M_BRIGHT, mouse_X, mouse_Y);
       end;
       if mouse_Down(M_BRIGHT) then
       begin
+        _mousedownright := True;
         if Assigned(OnGesture) then
           OnGesture(Self, M_BRIGHT, Getgesture(MouseLastCoords.LastMouseXRightButton, MouseLastCoords.LastMouseYRightButton));
+      end
+      else
+      begin
+        _mousedownright := False;
+        if Assigned(OnGestureRelease) then
+          OnGestureRelease(Self, M_BRIGHT, Getgesture(MouseLastCoords.LastMouseXRightButton, MouseLastCoords.LastMouseYRightButton));
       end;
     end;
   end;
@@ -3508,13 +3585,13 @@ end;
 
 procedure TSZPrimitive.Process;
 begin
+  ProcessAnimation;
   ProcessOpacity;
 end;
 
 procedure TSZPrimitive._fillcolor(Color : Cardinal);
 begin
   _color := Color;
-  _filled := True;
 end;
 
 {$IFNDEF FPC}
@@ -3676,8 +3753,8 @@ begin
       //      -1	1	which character
       //      0	1	character width (W)
       //      1	1	character height (H)
-      //      2	1	relx – horizontal offset according to cursor (-128..127)
-      //      3	1	rely – vertical offset according to cursor (-128..127)
+      //      2	1	relx ï¿½ horizontal offset according to cursor (-128..127)
+      //      3	1	rely ï¿½ vertical offset according to cursor (-128..127)
       //      4	1	horizontal cursor shift after drawing the character
       //      5	W * H	character data itself (uncompressed, 8 bits per pixel)
       //Read 1 byte what char is
@@ -3811,7 +3888,7 @@ begin
     file_Read(F, Self.TileW, SizeOf(Integer));
     // 164..196 Tile Height
     file_Read(F, Self.TileH, SizeOf(Integer));
-    // Dimensionar el ARRAY dinámico de las TILES
+    // Dimensionar el ARRAY dinï¿½mico de las TILES
     SetLength(Self.map.Tiles, Self.map.Count.X, Self.map.Count.Y);
     SetLength(Self.mapTexture.Tiles, Self.map.Count.X,
       Self.map.Count.Y);
