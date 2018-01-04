@@ -42,7 +42,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..;D:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\"/>
+      <OtherUnitFiles Value="..\..;F:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\"/>
       <UnitOutputDirectory Value="..\..\bin\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -51,6 +51,8 @@
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
+      <TargetCPU Value="i386"/>
+      <TargetOS Value="win32"/>
       <Optimizations>
         <OptimizationLevel Value="4"/>
       </Optimizations>

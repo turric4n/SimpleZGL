@@ -244,7 +244,9 @@ var
   x : Integer;
 begin
   lasthigh := 0;
-  for x := 0 to High(values) do if lasthigh <= values[x] then lasthigh := values[x];
+  for x := 0 to High(values) do
+  if values[x] < 6000 then
+    if lasthigh <= values[x] then lasthigh := values[x];
   Result := lasthigh;
 end;
 
