@@ -156,7 +156,7 @@ begin
       Self.Filled := True;
       Self.FillColor := $FFFFFFF;
       Self.OnFadeOut := Self.ResetOpacity;
-      TSpecialSquare(ASender).FadeOut(5);
+      TSpecialSquare(ASender).FadeOut(10);
     end;
   end;
 end;

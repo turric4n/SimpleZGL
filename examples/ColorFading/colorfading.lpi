@@ -11,7 +11,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="lainz_circle"/>
+      <Title Value="colorfading"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -29,7 +29,7 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="lainz_circle.lpr"/>
+        <Filename Value="colorfading.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
     </Units>
@@ -38,7 +38,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="..\..\bin\$(TargetCPU)-$(TargetOS)\lainz_circle"/>
+      <Filename Value="..\..\bin\$(TargetCPU)-$(TargetOS)\colorfading"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
