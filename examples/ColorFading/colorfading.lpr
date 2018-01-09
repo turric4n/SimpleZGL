@@ -66,26 +66,33 @@ var
   SpriteRectangle : TSZSquare;
   iteration : Integer;
 
-function GetMaxRes(const values : array of integer) : Integer;
-var
-  lasthigh : Integer;
-  x : Integer;
-begin
-  lasthigh := 0;
-  for x := 0 to High(values) do if lasthigh <= values[x] then lasthigh := values[x];
-  Result := lasthigh;
-end;
+  function GetMaxRes(const values : array of integer) : Integer;
+  var
+    lasthigh : Integer;
+    x : Integer;
+  begin
+    lasthigh := 0;
+    for x := 0 to High(values) do
+    if values[x] < 6000 then
+      if lasthigh <= values[x] then lasthigh := values[x];
+    Result := lasthigh;
+  end;
 
 function ColorToRGB(Color : LongInt) : TRGB;
 begin
-  Result.r := (Color shr 16) and $FF;
-  Result.g := (Color shr 8) and $FF;
-  Result.b := Color and $FF;
+{ bit | 15| 14| 13| 12| 11| 10| 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1  | 0 |
+      |       Blue        |         Green         |       Red          |
+      Each color is a byte. You need to separate a 24bit Long into 3 byte variables. Alpha not included!
+    }
+
+  Result.r := (Color shr 16);  //Shift right 16 Bits and red 8 bits (111111)  000000000000000011111111 -> RED
+  Result.g := (Color shr 8); //Shift right 8 Bits and Push green 8 bits (111111) 000000001111111100000000 -> Green
+  Result.b := Color; //Obtain 8 final bits 111111110000000000000000-> Blue
 end;
 
 function RGBToColor(Color : TRGB) : LongInt;
-begin
-  Result := Color.B + Color.G shl 8 + Color.R shl 16;
+begin       { 11111111 | 11111111 | 11111111 }
+  Result := Color.B or (Color.G shl 8) or (Color.R shl 16);
 end;
 
 function IsTheSameColor(ColorA, ColorB : LongInt) : Boolean;

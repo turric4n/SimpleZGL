@@ -9,8 +9,8 @@
         <Filename Value="lainz_circle.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="256"/>
-        <CursorPos X="101" Y="287"/>
+        <TopLine Value="129"/>
+        <CursorPos X="41" Y="159"/>
         <UsageCount Value="64"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>

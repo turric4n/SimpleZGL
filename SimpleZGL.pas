@@ -856,11 +856,14 @@ type
     _rectangle2: zglTRect;
     _unlimited: Boolean;
     _cameraback: zglPCamera2D;
+    _flipSecondBackground: Boolean;
   public
     constructor Create(ImagePath: string; Spritebatch: TSZSpriteBath;
     X, Y, W, H: Integer; FrameH, FrameW: Integer;
     Name: string = ''; LoadTextureNow: Boolean = False; unlimited: Boolean = True);
      property GetCamera: zglPCamera2D read _cameraback;
+     property FlipSecondBackground : Boolean read _flipSecondBackground write _flipSecondBackground;
+     property GetRectangle2 : zglTRect read _rectangle2 write _rectangle2;
     procedure Draw; override;
     procedure Input; override;
     procedure Process; override;
@@ -3396,8 +3399,12 @@ begin
       _rectangle.H, _angle, 255);
     if _unlimited then
     begin
+      if not FlipSecondBackground then
       ssprite2d_Draw(texture, _rectangle2.X, _rectangle2.Y, _rectangle.W,
-        _rectangle.H, _angle, 255);
+        _rectangle.H, _angle, 255)
+      else
+      ssprite2d_Draw(texture, _rectangle2.X, _rectangle2.Y, _rectangle.W,
+        _rectangle.H, _angle, 255, FX2D_FLIPX);
     end;
   end;
   cam2d_Set(nil);

@@ -11,7 +11,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="lainz_circle"/>
+      <Title Value="moving_sprite"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -29,7 +29,7 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="lainz_circle.lpr"/>
+        <Filename Value="moving_sprite.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
     </Units>
@@ -38,11 +38,11 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="..\..\bin\$(TargetCPU)-$(TargetOS)\lainz_circle"/>
+      <Filename Value="..\..\bin\$(TargetCPU)-$(TargetOS)\moving_sprite"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..;F:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\"/>
+      <OtherUnitFiles Value="..\..;F:\OneDrive\Code\PRG\PRG\ZenGL 0.3.x\headers\"/>
       <UnitOutputDirectory Value="..\..\bin\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -54,12 +54,13 @@
       <TargetCPU Value="i386"/>
       <TargetOS Value="win32"/>
       <Optimizations>
-        <OptimizationLevel Value="4"/>
+        <OptimizationLevel Value="3"/>
       </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
         <GenerateDebugInfo Value="False"/>
+        <DebugInfoType Value="dsDwarf3"/>
       </Debugging>
       <Options>
         <Win32>

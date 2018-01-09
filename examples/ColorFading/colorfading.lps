@@ -9,9 +9,9 @@
         <Filename Value="colorfading.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="116"/>
-        <CursorPos X="49" Y="128"/>
-        <UsageCount Value="64"/>
+        <TopLine Value="145"/>
+        <CursorPos X="15" Y="128"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -33,7 +33,7 @@
       </Unit2>
       <Unit3>
         <Filename Value="..\..\SimpleZGL.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="968"/>
         <CursorPos X="19" Y="989"/>
         <UsageCount Value="32"/>
@@ -50,20 +50,20 @@
       </Unit4>
       <Unit5>
         <Filename Value="D:\Onedrive\Code\PRG\PRG\ZenGL 0.3.x\headers\zglHeader.pas"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1847"/>
         <CursorPos X="3" Y="744"/>
         <UsageCount Value="32"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
         <Filename Value="C:\fpcupdeluxe32\fpcsrc\rtl\inc\objpash.inc"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="186"/>
         <CursorPos X="23" Y="206"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
